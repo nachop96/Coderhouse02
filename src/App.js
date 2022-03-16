@@ -5,7 +5,8 @@ import{
   View,
 } from 'react-native';
 
-import Header from './components/header';
+import StartGameScreen from './screens/StartGameScreen';
+
 import { styles } from './styles'
 const App = () => {
 
@@ -14,8 +15,9 @@ const App = () => {
   
     
     <View style={styles.container}>
-      
-         <Header title='Bienvenidos' />
+        
+         
+         <StartGameScreen />
          </View>
   );
 };
