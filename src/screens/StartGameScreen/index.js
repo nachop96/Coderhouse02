@@ -1,6 +1,7 @@
 import React from 'react';
 import {Text,View,TextInput,Button} from 'react-native';
 import Header from '../../components/header';
+import Card from '../../components/card';
 
 import { styles } from './styles';
 
@@ -10,7 +11,7 @@ const StartGameScreen = () => {
 
         <Header title = 'Adivina el numero'></Header>
         
-        <View style = {styles.card}>
+        <Card>
         <Text style = {styles.cardTitle}>Empezar juego</Text>
 
         <View style = {styles.inputContainer}>
@@ -26,9 +27,11 @@ const StartGameScreen = () => {
             <Button title ='Limpiar' onPress={() => null} color='#335145'/>
             <Button title ='Confirmar' onPress={() => null} color='#335145'/>
         </View>
+        </Card>
+
+        <Card><Text>asd</Text></Card>
         </View>
 
-        </View>
 
 
     );

@@ -7,16 +7,6 @@ export const styles = StyleSheet.create({
         flex: 1,
     },
 
-    card: {
-        flex:1,
-        flexGrow:0.4,
-        justifyContent: 'center',
-        backgroundColor:'#A6C36F',
-        elevation: 5,
-        marginTop:35,
-        marginHorizontal:50,
-
-    },
 
     cardTitle: {
 

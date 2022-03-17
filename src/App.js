@@ -4,8 +4,8 @@ import{
   Text,
   View,
 } from 'react-native';
-
 import StartGameScreen from './screens/StartGameScreen';
+
 
 import { styles } from './styles'
 const App = () => {
