@@ -29,7 +29,7 @@ const StartGameScreen = () => {
         </View>
         </Card>
 
-        <Card><Text>asd</Text></Card>
+    
         </View>
 
 
