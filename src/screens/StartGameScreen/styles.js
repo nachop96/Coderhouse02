@@ -1,5 +1,7 @@
 import { StyleSheet } from 'react-native'
 
+import { fontSize,colors,margin } from '../../constants/theme';
+
 export const styles = StyleSheet.create({
 
     container: {
@@ -10,11 +12,11 @@ export const styles = StyleSheet.create({
 
     cardTitle: {
 
-        fontSize: 20,
+        fontSize: fontSize.title,
         fontWeight:'bold',
         textAlign:'center',
-        marginVertical:20,
-        color: 'white'
+        marginVertical: margin.medium,
+        color: colors.primaryTitle
         
 
 
@@ -35,12 +37,12 @@ export const styles = StyleSheet.create({
         marginBottom:10,
         fontSize: 50,
         alignSelf: 'center',
-        color:'#335145',
+        color:colors.secondary,
 
     },
     
     label:{
-        fontSize:14,
+        fontSize:fontSize.text,
         fontWeight:'bold',
         color: 'white',
         marginBottom:10,
