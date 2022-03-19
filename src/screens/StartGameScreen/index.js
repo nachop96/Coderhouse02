@@ -2,10 +2,18 @@ import React from 'react';
 import {Text,View,TextInput,Button} from 'react-native';
 import Header from '../../components/header';
 import Card from '../../components/card';
+import Input from '../../components/input';
 
 import { styles } from './styles';
 
 const StartGameScreen = () => {
+
+    const handleOnChange = (text) => {
+
+        console.warn(text);
+
+    }
+
     return (
         <View style={styles.container}>
 
@@ -16,11 +24,16 @@ const StartGameScreen = () => {
 
         <View style = {styles.inputContainer}>
         <Text style = {styles.label}>Elija un numero</Text>
-        <TextInput style = {styles.input}
-            placeholder='11'
-            placeholderTextColor='#335145'
+        <Input
+            blurOnSubmit
+            autoCapitalization='none'
+            autoCorrect={false}
+            placeholder='10'
+            placeholderTextColor='#d6ccc2'
             maxLength={2}
-         ></TextInput>
+            keyboardType="numeric"
+            handleOnChange={(value) => handleOnChange(value)}
+         ></Input>
 
         </View>
         <View style={styles.buttonsContainer}>

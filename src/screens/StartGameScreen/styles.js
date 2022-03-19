@@ -26,21 +26,10 @@ export const styles = StyleSheet.create({
         flex:1,
         flexGrow: 0.6,
         marginHorizontal:20,
+        
 
     },
 
-
-    input:{
-        height:70,
-        borderBottomColor:'black',
-        borderBottomWidth: 3,
-        marginBottom:10,
-        fontSize: 50,
-        alignSelf: 'center',
-        color:colors.secondary,
-
-    },
-    
     label:{
         fontSize:fontSize.text,
         fontWeight:'bold',
