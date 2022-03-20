@@ -12,6 +12,7 @@ export const styles = StyleSheet.create({
         fontSize: 50,
         alignSelf: 'center',
         color:colors.secondary,
+        textAlign:'center'
     
     },
 
