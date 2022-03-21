@@ -1,24 +1,46 @@
 
-import React from 'react';
+import React, {useState} from 'react';
 import{
   Text,
   View,
+  SafeAreaView,
+
 } from 'react-native';
 import StartGameScreen from './screens/StartGameScreen';
+import GameScreen from './screens/GameScreen';
 
 
 import { styles } from './styles'
 const App = () => {
 
+  const [userNumber,setUserNumber] = useState('');
+  const handleStartGame = (selectedNumber) => {
+
+    setUserNumber(selectedNumber);
+
+
+  }
+
+  let content = <StartGameScreen onStartGame={handleStartGame} />
+
+  if(userNumber){
+
+    content = <GameScreen userOptions={userNumber} />
+
+  }
+ 
 
   return (
   
     
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
+      
+      
         
          
-         <StartGameScreen />
-         </View>
+         {content}
+         
+         </SafeAreaView>
   );
 };
 

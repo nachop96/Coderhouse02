@@ -51,6 +51,29 @@ export const styles = StyleSheet.create({
 
     },
 
+    confirmedText:{
+
+        fontSize: fontSize.button,
+        fontWeight: 'bold',
+        color: colors.secondary,
+        justifyContent:'center',
+        alignSelf:'center'
+
+
+    },
+
+    containerConfirmed:{
+        flex:1,
+        flexGrow:0.23,
+        flexDirection:'column',
+        justifyContent:'space-evenly',
+        marginHorizontal: 60,
+        paddingHorizontal:50,
+        
+        
+
+
+    }
     
     
     

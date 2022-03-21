@@ -17,6 +17,7 @@ export const fontSize= {
     title:20,
     text:14,
     button:18,
+    big:37,
 
 
 

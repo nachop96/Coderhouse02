@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
 
     card: {
         flex:1,
-        flexGrow:0.4,
+        flexGrow:0.45,
         justifyContent: 'center',
         backgroundColor: colors.primary,
         marginTop:35,

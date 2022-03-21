@@ -1,14 +1,15 @@
 import React, {useState} from 'react';
-import {Text,View,TextInput,Button,TouchableWithoutFeedback,Keyboard} from 'react-native';
+import {Text,View,TextInput,Button,TouchableWithoutFeedback,Keyboard,KeyboardAvoidingView,Platform} from 'react-native';
 import Header from '../../components/header';
 import Card from '../../components/card';
 import Input from '../../components/input';
 
 import { styles } from './styles';
+import splitLayoutProps from 'react-native/Libraries/StyleSheet/splitLayoutProps';
 
+const isIOS = Platform.OS === 'ios';
 
-
-const StartGameScreen = () => {
+const StartGameScreen = ({onStartGame}) => {
 
     
     const [inputValue, setInputValue] = useState('');
@@ -26,6 +27,7 @@ const StartGameScreen = () => {
 
 
     }
+
 
 
     const handleConfirmInput = () => {
@@ -53,9 +55,23 @@ const StartGameScreen = () => {
 
     }
 
+    const confirmedOutput = confirmed ? (
+        
+    <Card style={styles.containerConfirmed}>
+    <Text style={styles.cardTitle}>Tu Selección</Text>
+    <Text style={styles.confirmedText}>{selectedNumber}</Text>
+    <Button title ='Empezar Juego' onPress={() => onStartGame(selectedNumber)} color='#335145'/>
+    </Card>) 
+    : null;
+
     return (
 
         <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+
+        <KeyboardAvoidingView 
+      behavior={isIOS ? 'padding' : 'height'}
+      style={styles.container}
+        >
 
         <View style={styles.container}>
 
@@ -85,11 +101,12 @@ const StartGameScreen = () => {
         </View>
         </Card>
 
+        {confirmedOutput}
     
         </View>
-
+        </KeyboardAvoidingView>
         </TouchableWithoutFeedback>
-
+    
 
     );
 
