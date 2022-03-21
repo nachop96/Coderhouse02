@@ -14,10 +14,11 @@ export const styles = StyleSheet.create({
 
     title:{
         fontSize:20,
-        fontWeight:'bold',
+        
         textAlign:'center',
         margin: 10,
         color:'#BEEF9E',
+        fontFamily:'Montserrat-Bold'
 
 
     },
