@@ -1,6 +1,6 @@
 
-import React, {useState} from 'react';
-import{
+import React, { useState } from 'react';
+import {
   Text,
   View,
   SafeAreaView,
@@ -13,7 +13,7 @@ import GameScreen from './screens/GameScreen';
 import { styles } from './styles'
 const App = () => {
 
-  const [userNumber,setUserNumber] = useState('');
+  const [userNumber, setUserNumber] = useState('');
   const handleStartGame = (selectedNumber) => {
 
     setUserNumber(selectedNumber);
@@ -23,24 +23,24 @@ const App = () => {
 
   let content = <StartGameScreen onStartGame={handleStartGame} />
 
-  if(userNumber){
+  if (userNumber) {
 
     content = <GameScreen userOptions={userNumber} />
 
   }
- 
+
 
   return (
-  
-    
+
+
     <SafeAreaView style={styles.container}>
-      
-      
-        
-         
-         {content}
-         
-         </SafeAreaView>
+
+
+
+
+      {content}
+
+    </SafeAreaView>
   );
 };
 

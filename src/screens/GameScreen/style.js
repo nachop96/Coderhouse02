@@ -1,36 +1,36 @@
 import { StyleSheet } from 'react-native';
-import { colors,fontSize, padding } from '../../constants/theme';
+import { colors, fontSize, padding } from '../../constants/theme';
 
 export const styles = StyleSheet.create({
 
-    container:{
-        flex:1,
+    container: {
+        flex: 1,
 
 
     },
 
-    confirmedText:{
+    confirmedText: {
 
         fontSize: fontSize.big,
         fontWeight: 'bold',
         color: colors.secondary,
-        justifyContent:'center',
-        alignSelf:'center',
-        paddingVertical:20,
+        justifyContent: 'center',
+        alignSelf: 'center',
+        paddingVertical: 20,
 
 
     },
 
-    confirmedTitle:{
+    confirmedTitle: {
         fontSize: fontSize.title,
         fontWeight: 'bold',
         color: colors.secondaryText,
-        justifyContent:'center',
-        alignSelf:'center'
+        justifyContent: 'center',
+        alignSelf: 'center'
 
     },
 
-    buttonsContainer:{
+    buttonsContainer: {
 
         flex: 1,
         flexGrow: 0.23,

@@ -1,16 +1,16 @@
 import React from 'react';
-import {TextInput,View} from 'react-native';
+import { TextInput, View } from 'react-native';
 
 import { styles } from './styles';
 
-const Input = ({handleOnChange,style, ...props}) => {
+const Input = ({ handleOnChange, style, ...props }) => {
 
-    return(
+    return (
         <View style={styles.container}>
-        <TextInput 
-            {...props} 
-            style={[ style,styles.input]} 
-            onChangeText={handleOnChange}/>
+            <TextInput
+                {...props}
+                style={[style, styles.input]}
+                onChangeText={handleOnChange} />
         </View>
 
     )

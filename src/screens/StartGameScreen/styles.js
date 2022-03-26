@@ -1,11 +1,11 @@
 import { StyleSheet } from 'react-native'
 
-import { fontSize,colors,margin } from '../../constants/theme';
+import { fontSize, colors, margin } from '../../constants/theme';
 
 export const styles = StyleSheet.create({
 
     container: {
-     
+
         flex: 1,
     },
 
@@ -13,34 +13,34 @@ export const styles = StyleSheet.create({
     cardTitle: {
 
         fontSize: fontSize.title,
-        fontWeight:'bold',
-        textAlign:'center',
+        fontWeight: 'bold',
+        textAlign: 'center',
         marginVertical: margin.medium,
         color: colors.primaryTitle
-        
+
 
 
     },
 
     inputContainer: {
-        flex:1,
+        flex: 1,
         flexGrow: 0.6,
-        marginHorizontal:20,
-        
+        marginHorizontal: 20,
+
 
     },
 
-    label:{
-        fontSize:fontSize.text,
-        fontWeight:'bold',
+    label: {
+        fontSize: fontSize.text,
+        fontWeight: 'bold',
         color: 'white',
-        marginBottom:10,
-        justifyContent:'center',
-        alignSelf:'center',
+        marginBottom: 10,
+        justifyContent: 'center',
+        alignSelf: 'center',
 
     },
 
-    buttonsContainer:{
+    buttonsContainer: {
 
         flex: 1,
         flexGrow: 0.18,
@@ -51,32 +51,32 @@ export const styles = StyleSheet.create({
 
     },
 
-    confirmedText:{
+    confirmedText: {
 
         fontSize: fontSize.button,
         fontWeight: 'bold',
         color: colors.secondary,
-        justifyContent:'center',
-        alignSelf:'center'
+        justifyContent: 'center',
+        alignSelf: 'center'
 
 
     },
 
-    containerConfirmed:{
-        flex:1,
-        flexGrow:0.23,
-        flexDirection:'column',
-        justifyContent:'space-evenly',
+    containerConfirmed: {
+        flex: 1,
+        flexGrow: 0.23,
+        flexDirection: 'column',
+        justifyContent: 'space-evenly',
         marginHorizontal: 60,
-        paddingHorizontal:50,
-        
-        
+        paddingHorizontal: 50,
+
+
 
 
     }
-    
-    
-    
+
+
+
 
 
 });
