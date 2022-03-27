@@ -1,11 +1,19 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet,Dimensions } from 'react-native';
 import { colors, fontSize, padding } from '../../constants/theme';
+
+const { width, height } = Dimensions.get('window');
 
 export const styles = StyleSheet.create({
 
     container: {
         flex: 1,
 
+
+    },
+
+    cardConteiner:{
+
+        height: height * 0.35,
 
     },
 
@@ -32,11 +40,10 @@ export const styles = StyleSheet.create({
 
     buttonsContainer: {
 
-        flex: 1,
-        flexGrow: 0.23,
+        height: height * 0.05,
         flexDirection: 'row',
         justifyContent: 'space-evenly',
-        paddingHorizontal: 8,
+        marginHorizontal: 8,
 
 
     },

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, View, TextInput, Button, TouchableWithoutFeedback, Keyboard, KeyboardAvoidingView, Platform } from 'react-native';
+import { Text, View, TextInput, Button, TouchableWithoutFeedback, Keyboard, KeyboardAvoidingView, Platform, ScrollView, Scroll } from 'react-native';
 import Header from '../../components/header';
 import Card from '../../components/card';
 import Input from '../../components/input';
@@ -65,48 +65,50 @@ const StartGameScreen = ({ onStartGame }) => {
         : null;
 
     return (
+        <ScrollView style={styles.container}>
+            <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
 
-        <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+                <KeyboardAvoidingView
+                    behavior={isIOS ? 'padding' : 'height'}
+                    style={styles.container}
+                >
 
-            <KeyboardAvoidingView
-                behavior={isIOS ? 'padding' : 'height'}
-                style={styles.container}
-            >
 
-                <View style={styles.container}>
+                    <View style={styles.container}>
 
-                    <Header title='Adivina el numero'></Header>
+                        <Header title='Adivina el numero'></Header>
 
-                    <Card>
-                        <Text style={styles.cardTitle}>Empezar juego</Text>
+                        <Card>
+                            <Text style={styles.cardTitle}>Empezar juego</Text>
 
-                        <View style={styles.inputContainer}>
-                            <Text style={styles.label}>Elija un numero</Text>
-                            <Input
-                                blurOnSubmit
-                                autoCapitalization='none'
-                                autoCorrect={false}
-                                placeholder='Ej: 10'
-                                placeholderTextColor='#d6ccc2'
-                                maxLength={2}
-                                keyboardType="numeric"
-                                handleOnChange={(value) => handleOnChange(value)}
-                                value={inputValue}
-                            ></Input>
+                            <View style={styles.inputContainer}>
+                                <Text style={styles.label}>Elija un numero</Text>
+                                <Input
+                                    blurOnSubmit
+                                    autoCapitalization='none'
+                                    autoCorrect={false}
+                                    placeholder='Ej: 10'
+                                    placeholderTextColor='#d6ccc2'
+                                    maxLength={2}
+                                    keyboardType="numeric"
+                                    handleOnChange={(value) => handleOnChange(value)}
+                                    value={inputValue}
+                                ></Input>
 
-                        </View>
-                        <View style={styles.buttonsContainer}>
-                            <Button title='Limpiar' onPress={() => handleOnClear()} color='#335145' />
-                            <Button title='Confirmar' onPress={() => handleConfirmInput()} color='#335145' />
-                        </View>
-                    </Card>
+                            </View>
+                            <View style={styles.buttonsContainer}>
+                                <Button title='Limpiar' onPress={() => handleOnClear()} color='#335145' />
+                                <Button title='Confirmar' onPress={() => handleConfirmInput()} color='#335145' />
+                            </View>
+                        </Card>
 
-                    {confirmedOutput}
+                        {confirmedOutput}
 
-                </View>
-            </KeyboardAvoidingView>
-        </TouchableWithoutFeedback>
+                    </View>
 
+                </KeyboardAvoidingView>
+            </TouchableWithoutFeedback >
+        </ScrollView >
 
     );
 

@@ -1,6 +1,9 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet,Dimensions } from 'react-native'
 
 import { fontSize, colors, margin } from '../../constants/theme';
+
+
+const {width,height} = Dimensions.get('screen');
 
 export const styles = StyleSheet.create({
 
@@ -23,8 +26,7 @@ export const styles = StyleSheet.create({
     },
 
     inputContainer: {
-        flex: 1,
-        flexGrow: 0.6,
+        
         marginHorizontal: 20,
 
 
@@ -42,8 +44,7 @@ export const styles = StyleSheet.create({
 
     buttonsContainer: {
 
-        flex: 1,
-        flexGrow: 0.18,
+        height: height * 0.05,
         flexDirection: 'row',
         justifyContent: 'space-evenly',
         paddingHorizontal: 25,
@@ -63,8 +64,7 @@ export const styles = StyleSheet.create({
     },
 
     containerConfirmed: {
-        flex: 1,
-        flexGrow: 0.23,
+        height: height / 3.5,
         flexDirection: 'column',
         justifyContent: 'space-evenly',
         marginHorizontal: 60,

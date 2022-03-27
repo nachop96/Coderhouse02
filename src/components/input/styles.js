@@ -1,11 +1,14 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet,Dimensions } from 'react-native';
 import { colors } from '../../constants/theme';
+
+const {width,height} = Dimensions.get('screen');
+
 
 export const styles = StyleSheet.create({
 
 
     input: {
-        height: 70,
+        height: height * 0.09,
         borderBottomColor: 'black',
         borderBottomWidth: 3,
         marginBottom: 10,

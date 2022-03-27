@@ -1,5 +1,7 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet,Dimensions } from 'react-native'
 import { colors } from '../../constants/theme';
+
+const {width,height} = Dimensions.get('screen');
 
 export const styles = StyleSheet.create({
 
@@ -9,11 +11,11 @@ export const styles = StyleSheet.create({
     },
 
     card: {
-        flex: 1,
-        flexGrow: 0.45,
+        
+        height: height * 0.35,
         justifyContent: 'center',
         backgroundColor: colors.primary,
-        marginTop: 35,
+        marginTop: height * 0.03,
         marginHorizontal: 50,
         elevation: 5,
 
